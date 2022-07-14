@@ -75,10 +75,10 @@ function clearGrid() {
 
 function defaultGrid() {
     let layout = 16;
-    //container.setAttribute('style', `grid-template-columns: repeat(${layout}, 2fr)`, `grid-template-rows: repeat(${layout}, 2fr)`)
-    container.style.cssText = `
-        grid-template-columns: repeat(${layout}, 2fr)
-        grid-template-rows: repeat(${layout}, 2fr)`
+    container.setAttribute('style', `grid-template-columns: repeat(${layout}, 2fr); grid-template-rows: repeat(${layout}, 2fr)`)
+    //container.style.cssText = `
+    //    grid-template-columns: repeat(${layout}, 2fr)
+    //    grid-template-rows: repeat(${layout}, 2fr)`
     for (i=1; i<=layout * layout; i++) {
         let square=document.createElement('div')
         square.classList.add('grid');
