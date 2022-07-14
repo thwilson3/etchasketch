@@ -24,6 +24,12 @@ nav {
 
 button {
     font-size: 15px;
+    height: 2rem;
+    transition-duration: 0.5s;
+}
+
+button:hover {
+    background-color: white;
 }
 
 body {
