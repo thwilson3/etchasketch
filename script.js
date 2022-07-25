@@ -5,12 +5,6 @@ let button64 = document.getElementById('64')
 let container = document.querySelector('.grid-container')
 let artBoard = container.querySelectorAll(':scope > .grid')
 
-let buttonval = button16.value
-
-console.log(buttonval)
-
-//assign size selection to whichever button is pressed
-
 button16.addEventListener('click', function(){
     clearGrid();
     let sizeSelection = button16.value;
@@ -68,17 +62,9 @@ function clearGrid() {
     }
 }
 
-//function changeSize() {
-//    let val 
-// }
-//change the grid template rows and columns to selection
-
 function defaultGrid() {
     let layout = 16;
     container.setAttribute('style', `grid-template-columns: repeat(${layout}, 2fr); grid-template-rows: repeat(${layout}, 2fr)`)
-    //container.style.cssText = `
-    //    grid-template-columns: repeat(${layout}, 2fr)
-    //    grid-template-rows: repeat(${layout}, 2fr)`
     for (i=1; i<=layout * layout; i++) {
         let square=document.createElement('div')
         square.classList.add('grid');
